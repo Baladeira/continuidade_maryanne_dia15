@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#260b16">
+<title>Maryanne — Antes do teu dia ♥</title>
+<style>
+:root{--wine:#260b16;--wine2:#4b1429;--rose:#f08ca4;--gold:#d9b574;--paper:#fff1df}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 15%,#65243e,#32101f 48%,#16070d);color:#fff1e8;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+.petal{position:fixed;top:-25px;width:12px;height:19px;border-radius:90% 10% 80% 20%;background:linear-gradient(140deg,#f6a0b6,#9d294d);opacity:.55;pointer-events:none;animation:fall linear infinite;z-index:0}@keyframes fall{to{transform:translate(55px,110vh) rotate(430deg)}}
+main{min-height:100vh;display:grid;place-items:center;padding:30px 16px;position:relative;z-index:1}.frame{width:min(790px,100%);text-align:center;border:1px solid #d9b57488;outline:1px solid #d9b57430;outline-offset:7px;background:#19081099;padding:clamp(28px,6vw,65px) clamp(20px,7vw,70px);box-shadow:0 25px 90px #0007;position:relative}
+.kicker{font:11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}h1{font-size:clamp(40px,8vw,72px);font-weight:normal;font-style:italic;color:var(--rose);margin:18px 0;line-height:1.06;text-shadow:0 0 32px #f08ca42c}
+.intro{font-size:clamp(17px,3.4vw,21px);line-height:1.75;max-width:570px;margin:0 auto 25px}.ornament{font-size:30px;color:var(--gold);margin:20px 0}
+button{cursor:pointer;border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(135deg,#f0d39a,#bc8a45);color:#32111e;font:700 11px Arial,sans-serif;letter-spacing:1.1px;box-shadow:0 8px 24px #0005}
+.letter{display:none;text-align:left;background:var(--paper);color:#51283a;padding:clamp(23px,5vw,45px);margin:28px auto 0;max-width:610px;line-height:1.9;font-size:17px;box-shadow:0 15px 40px #0005;position:relative;animation:open .7s ease both}.letter.show{display:block}.letter:after{content:"";position:absolute;inset:8px;border:1px solid #b78b7655;pointer-events:none}.letter p{position:relative;margin:0 0 15px}.letter .sign{text-align:right;font-style:italic;font-size:23px;color:#8b3150;margin-top:20px}.small{color:#e8c9c8;font-size:13px;margin-top:28px;letter-spacing:1px}
+@keyframes open{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style></head><body><main><section class="frame">
+<div class="kicker">Uma continuação feita com carinho · 15 de outubro</div>
+<h1>Maryanne, falta pouco…</h1>
+<p class="intro">Ontem eu te deixei uma pequena surpresa. Hoje, queria te entregar mais um pedacinho do que estou preparando — porque algumas pessoas merecem ser celebradas além de um único dia.</p>
+<div class="ornament">✦ ❦ ✦</div>
+<button id="open">ABRIR ESTA CARTINHA ♥</button>
+<article class="letter" id="letter" aria-live="polite">
+<p>Maryanne,</p>
+<p>Talvez tu nem imagines quanto carinho coloquei em cada detalhe disso tudo. Eu queria que essa surpresa tivesse a nossa cara: um pouco de delicadeza, um pouco de romantismo e, principalmente, sinceridade.</p>
+<p>Gosto de saber que posso criar momentos especiais contigo, mesmo quando são feitos de coisas simples. Às vezes, uma mensagem, uma conversa ou um sorriso já deixa o dia diferente. E eu espero que hoje tu sintas um pouquinho desse carinho chegando até ti.</p>
+<p>Amanhã é o teu dia, mas eu não queria esperar até lá para te lembrar de uma coisa: tu mereces ser tratada com cuidado, respeito e amor. Mereces pessoas que celebrem quem tu és, não só numa data especial, mas também nos dias comuns.</p>
+<p>Guarda esta cartinha como mais uma pista. A última parte te espera amanhã. ♥</p>
+<p class="sign">Com carinho,<br>Pedro</p>
+</article>
+<div class="small">A última surpresa chega no teu aniversário · ♥</div>
+</section></main>
+<script>
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!rm)for(let i=0;i<18;i++){let p=document.createElement('i');p.className='petal';p.style.left=Math.random()*100+'vw';p.style.animationDuration=8+Math.random()*10+'s';p.style.animationDelay=-Math.random()*15+'s';document.body.appendChild(p)}
+document.getElementById('open').onclick=()=>{let l=document.getElementById('letter');let show=!l.classList.contains('show');l.classList.toggle('show',show);document.getElementById('open').textContent=show?'FECHAR CARTINHA':'ABRIR ESTA CARTINHA ♥';if(show)l.scrollIntoView({behavior:rm?'auto':'smooth',block:'nearest'})}
+</script></body></html>
